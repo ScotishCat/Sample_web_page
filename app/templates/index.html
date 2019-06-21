@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Main page{% endblock %}
+
+{% block content %}
+    <h1>{% if not current_user.is_anonymous %}
+        Hi, {{ current_user.username }}!
+        {% endif %}
+    </h1>
+    <a href="/login">
+        <img src="{{ url_for('static', filename='profile.png') }}" width="350">
+    </a>
+
+    <a href="/login">
+        <img src="{{ url_for('static', filename='profile.png') }}" width="350">
+    </a>
+{% endblock %}
